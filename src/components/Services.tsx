@@ -1,37 +1,47 @@
 import React from 'react';
-import { Scale, Users, Building2, FileText, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Scale, Users, Building2, FileText, HeartHandshake, ShieldCheck, Briefcase, Landmark } from 'lucide-react';
 import { ServiceItem } from '../types';
 
 const services: ServiceItem[] = [
   {
-    title: "Família e Sucessões",
-    description: "Planejamento patrimonial, inventários e divórcios com abordagem humanizada e técnica.",
-    icon: <Users size={28} strokeWidth={1} />
-  },
-  {
-    title: "Direito Civil",
-    description: "Atuação estratégica em responsabilidade civil e proteção de direitos privados.",
-    icon: <Scale size={28} strokeWidth={1} />
-  },
-  {
     title: "Direito Empresarial",
-    description: "Assessoria consultiva e contenciosa para mitigação de riscos e segurança dos negócios.",
+    description: "Consultoria para empresas, questões contratuais e litígios comerciais.",
     icon: <Building2 size={28} strokeWidth={1} />
   },
   {
-    title: "Contratos",
-    description: "Elaboração e revisão minuciosa de instrumentos contratuais complexos.",
+    title: "Direito Civil",
+    description: "Disputas familiares, contratos e responsabilidade civil.",
+    icon: <Scale size={28} strokeWidth={1} />
+  },
+  {
+    title: "Direito de Família",
+    description: "Divórcio, guarda, pensão alimentícia e acordos pré-nupciais.",
+    icon: <Users size={28} strokeWidth={1} />
+  },
+  {
+    title: "Planejamento Patrimonial e Sucessório",
+    description: "Testamentos, heranças, planejamento sucessório e administração de bens.",
     icon: <FileText size={28} strokeWidth={1} />
   },
   {
-    title: "Mediação",
-    description: "Resolução de conflitos através de métodos adequados, prezando pela celeridade.",
-    icon: <HeartHandshake size={28} strokeWidth={1} />
+    title: "Direito Trabalhista",
+    description: "Relações trabalhistas, contratos, rescisões e litígios.",
+    icon: <Briefcase size={28} strokeWidth={1} />
   },
   {
-    title: "Consultoria Jurídica",
-    description: "Pareceres e orientações preventivas para tomadas de decisão assertivas.",
+    title: "Direito Previdenciário",
+    description: "Planejamento previdenciário, aposentadorias, benefícios por incapacidade, LOAS/BPC e defesas empresariais junto ao INSS.",
     icon: <ShieldCheck size={28} strokeWidth={1} />
+  },
+  {
+    title: "Direito Administrativo",
+    description: "Defesa nas relações entre cidadãos e o Estado.",
+    icon: <Landmark size={28} strokeWidth={1} />
+  },
+  {
+    title: "Mediação e Arbitragem",
+    description: "Solução alternativa de conflitos fora dos tribunais.",
+    icon: <HeartHandshake size={28} strokeWidth={1} />
   }
 ];
 
@@ -44,11 +54,11 @@ const Services: React.FC = () => {
           <h2 className="font-serif text-4xl text-brand-dark mb-6">Atuação Jurídica</h2>
           <div className="w-24 h-[1px] bg-brand-gold mx-auto mb-6"></div>
           <p className="font-sans text-brand-dark/70 font-light">
-            Dedicação exclusiva às áreas do direito privado, com foco na proteção patrimonial e resolução de conflitos.
+            Atuação preventiva e judicial com excelência, ética e qualidade, agregando valor aos clientes com confiança, eficiência e transparência.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-brand-gray/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-brand-gray/20">
           {services.map((service, index) => (
             <div 
               key={index}

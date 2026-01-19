@@ -30,9 +30,16 @@ const Hero: React.FC = () => {
             Advocacia
           </span>
 
-          <p className="text-brand-light/80 font-sans font-light text-lg max-w-xl mx-auto mb-16 leading-relaxed tracking-wide">
+          <p className="text-brand-light/80 font-sans font-light text-lg max-w-xl mx-auto mb-8 leading-relaxed tracking-wide">
             Elegância, discrição e excelência técnica na defesa dos seus interesses.
           </p>
+
+          <div className="max-w-2xl mx-auto mb-16 px-4">
+            <blockquote className="font-serif text-brand-light/90 italic text-base md:text-lg leading-relaxed border-l-2 border-brand-gold/50 pl-6">
+              "A Justiça tem numa das mãos a balança em que pesa o direito, e na outra a espada de que serve para o defender. A espada sem a balança é a força brutal, a balança sem a espada é a impotência do direito."
+            </blockquote>
+            <p className="text-brand-gold/70 text-xs md:text-sm mt-3 text-right pr-6">— Rudolf von Ihering</p>
+          </div>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <a

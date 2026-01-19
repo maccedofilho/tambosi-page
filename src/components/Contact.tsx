@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Escritório</h5>
-                  <p className="text-sm">Av. Rio Branco, 1560 - Centro<br />Florianópolis - SC</p>
+                  <p className="text-sm">Rua do Príncipe, 330 - Sala 203<br />Centro - Joinville - SC<br />CEP: 89201-901</p>
                 </div>
               </div>
               
@@ -41,7 +41,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Telefone</h5>
-                  <p className="text-sm">+55 (48) 99999-9999</p>
+                  <p className="text-sm">(47) 3202-5510</p>
+                  <p className="text-sm">(47) 98802-8253</p>
                 </div>
               </div>
 

@@ -29,18 +29,27 @@ const About: React.FC = () => {
               <h2 className="font-serif text-4xl md:text-5xl text-brand-dark">Simone Maciel Tambosi</h2>
             </div>
             
-            <p className="font-sans text-brand-dark/80 leading-loose font-light text-lg">
-              Com uma trajetória marcada pela excelência e rigor técnico, Simone Maciel Tambosi construiu o <strong>Tambosi Advocacia</strong> sob os pilares da ética e do atendimento personalizado.
-            </p>
+            <div className="space-y-3">
+              <p className="font-sans text-brand-dark/80 leading-loose font-light">
+                <strong>Graduada em Direito</strong> pela ACE – Faculdade Guilherme Guimbalda (Joinville/SC)
+              </p>
+              <p className="font-sans text-brand-dark/80 leading-loose font-light">
+                <strong>Graduada em Sociologia</strong> pela Universidade do Vale do Itajaí (Itajaí/SC)
+              </p>
+              <p className="font-sans text-brand-dark/80 leading-loose font-light">
+                <strong>Especialista em Finanças e Controladoria</strong> pelo INPG (Instituto Nacional de Pós Graduação)
+              </p>
+            </div>
 
-            <p className="font-sans text-brand-dark/80 leading-loose font-light text-lg">
-              Nosso escritório boutique se destaca pelos traços finos de uma advocacia artesanal, onde cada demanda é tratada com a exclusividade que merece. Atuamos com discrição e profundidade, garantindo segurança jurídica em momentos decisivos.
+            <p className="font-sans text-brand-dark/80 leading-loose font-light text-lg mt-6">
+              O escritório foca na <strong>advocacia preventiva e judicial</strong>, reduzindo custos e transtornos emocionais. Atuamos de forma consultiva para auxiliar na tomada de decisões de negócios e atos da vida civil, com excelência, ética, agilidade e qualidade.
             </p>
 
             <div className="bg-brand-light border-l-2 border-brand-gold pl-8 py-2 my-8">
-               <blockquote className="font-serif text-2xl text-brand-dark italic">
-                "O direito, quando exercido com precisão e elegância, transforma vidas e perpetua legados."
+               <blockquote className="font-serif text-xl text-brand-dark italic leading-relaxed">
+                "A Justiça tem numa das mãos a balança em que pesa o direito, e na outra a espada de que serve para o defender. A espada sem a balança é a força brutal, a balança sem a espada é a impotência do direito."
               </blockquote>
+              <p className="font-sans text-brand-dark/60 text-sm mt-3">— Rudolf von Ihering</p>
             </div>
 
             <div className="pt-6 flex items-center justify-between border-t border-brand-gray/30">
