@@ -52,12 +52,11 @@ const About: React.FC = () => {
               <p className="font-sans text-brand-dark/60 text-sm mt-3">— Rudolf von Ihering</p>
             </div>
 
-            <div className="pt-6 flex items-center justify-between border-t border-brand-gray/30">
+            <div className="pt-6 border-t border-brand-gray/30">
                <div>
                   <span className="block font-serif text-brand-dark text-lg">Simone Maciel Tambosi</span>
                   <span className="block font-sans text-xs text-brand-gold tracking-widest mt-1">OAB/SC 47106</span>
                </div>
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Assinatura" className="h-12 opacity-40 mix-blend-multiply" />
             </div>
           </div>
         </div>
