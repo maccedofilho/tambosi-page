@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,13 +53,7 @@ const Navbar: React.FC = () => {
           className="group flex items-center gap-4"
         >
              <div className={`transition-colors duration-300 -mt-4 ${isScrolled ? 'text-brand-dark' : 'text-brand-dark md:text-white'}`}>
-                <svg width="45" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M25 38V14C25 9 36 9 42 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M25 38V14C25 9 14 9 8 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M25 38V17" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M10 14C16 8 23 8 25 11" stroke="#C3B69B" strokeWidth="1.5" strokeLinecap="round"/>
-                  <path d="M40 14C34 8 27 8 25 11" stroke="#C3B69B" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
+                <Logo width={45} height={40} />
              </div>
              
              <div className="flex flex-col items-start justify-center pt-1">
@@ -97,6 +92,8 @@ const Navbar: React.FC = () => {
         <button
           className="md:hidden text-brand-gold"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
         </button>
@@ -106,6 +103,9 @@ const Navbar: React.FC = () => {
         className={`fixed inset-0 bg-brand-light z-40 flex flex-col items-center justify-center space-y-10 transition-transform duration-500 md:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu de navegação"
       >
         {navLinks.map((link) => (
           <a
@@ -117,6 +117,13 @@ const Navbar: React.FC = () => {
             {link.label}
           </a>
         ))}
+        <a
+          href="#contato"
+          onClick={(e) => handleSmoothScroll(e, '#contato')}
+          className="text-2xl font-serif text-brand-gold hover:text-brand-dark transition-colors"
+        >
+          Contato
+        </a>
       </div>
     </nav>
   );
