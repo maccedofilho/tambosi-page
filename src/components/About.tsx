@@ -11,7 +11,7 @@ const About: React.FC = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10 aspect-[3/4] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                src="/simone-pic.JPEG"
                 alt="Simone Maciel Tambosi - Advogada OAB/SC 47106"
                 loading="lazy"
                 className="w-full h-full object-cover filter sepia-[0.1] hover:sepia-0 transition-all duration-1000 ease-out"
