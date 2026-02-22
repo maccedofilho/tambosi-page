@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
       `Mensagem:\n${formData.message}`
     );
     
-    window.location.href = `mailto:contato@tambosi.adv.br?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contato@tambosiadv.adv.br?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -57,28 +57,27 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Escritório</h5>
-                  <p className="text-sm">Rua do Príncipe, 330 - Sala 203<br />Centro - Joinville - SC<br />CEP: 89201-901</p>
+                  <p className="text-sm">Edifício Helbor Offices<br />Rua Henrique Meyer, 280<br />Centro - Joinville - SC</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-6 group">
-                <a href="tel:+554732025510" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
+                <a href="tel:+554796753244" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
                   <Phone size={18} />
                 </a>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Telefone</h5>
-                  <a href="tel:+554732025510" className="text-sm block hover:text-brand-gold transition-colors">(47) 3202-5510</a>
-                  <a href="tel:+5547988028253" className="text-sm block hover:text-brand-gold transition-colors">(47) 98802-8253</a>
+                  <a href="tel:+554796753244" className="text-sm block hover:text-brand-gold transition-colors">(47) 96753-244</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-6 group">
-                <a href="mailto:contato@tambosi.adv.br" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
+                <a href="mailto:contato@tambosiadv.adv.br" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
                   <Mail size={18} />
                 </a>
                 <div>
                    <h5 className="font-serif text-lg text-white mb-1">E-mail</h5>
-                   <a href="mailto:contato@tambosi.adv.br" className="text-sm hover:text-brand-gold transition-colors">contato@tambosi.adv.br</a>
+                   <a href="mailto:contato@tambosiadv.adv.br" className="text-sm hover:text-brand-gold transition-colors">contato@tambosiadv.adv.br</a>
                 </div>
               </div>
             </div>
