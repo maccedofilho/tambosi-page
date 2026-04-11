@@ -7,9 +7,7 @@ const Footer: React.FC = () => {
     <footer className="bg-brand-green border-t border-brand-light/5 py-20 text-brand-light">
       <div className="container mx-auto px-6 text-center">
         <div className="mb-10 flex flex-col items-center justify-center opacity-90">
-            <Logo width={50} height={45} className="mb-5 text-brand-light" />
-            <h2 className="font-serif text-3xl tracking-[0.2em] uppercase font-medium">Tambosi</h2>
-            <span className="text-[0.65rem] uppercase tracking-[0.5em] text-brand-gold mt-2 font-light pl-1">Advocacia</span>
+            <Logo height={56} className="mb-2 mx-auto opacity-95" />
         </div>
         
         <div className="flex justify-center space-x-10 mb-12 text-brand-gold">

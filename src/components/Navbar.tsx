@@ -50,20 +50,13 @@ const Navbar: React.FC = () => {
         <a 
           href="#home" 
           onClick={(e) => handleSmoothScroll(e, '#home')}
-          className="group flex items-center gap-4"
+          className="group flex items-center"
         >
-             <div className={`transition-colors duration-300 -mt-4 ${isScrolled ? 'text-brand-dark' : 'text-brand-dark md:text-white'}`}>
-                <Logo width={45} height={40} />
-             </div>
-             
-             <div className="flex flex-col items-start justify-center pt-1">
-                <h1 className={`font-serif text-xl md:text-2xl tracking-[0.2em] uppercase transition-colors duration-300 leading-none font-medium ${isScrolled ? 'text-brand-dark' : 'text-brand-dark md:text-white'}`}>
-                  Tambosi
-                </h1>
-                <span className={`block font-sans text-[0.55rem] md:text-[0.65rem] uppercase tracking-[0.45em] mt-1.5 font-light pl-[2px] ${isScrolled ? 'text-brand-gold' : 'text-brand-gold'}`}>
-                  Advocacia
-                </span>
-             </div>
+          <span className="sr-only">Tambosi Advocacia</span>
+          <Logo
+            height={isScrolled ? 44 : 52}
+            className={`transition-all duration-300 ${!isScrolled ? 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]' : ''}`}
+          />
         </a>
 
         <div className="hidden md:flex space-x-12 items-center">

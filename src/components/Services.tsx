@@ -20,7 +20,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Planejamento Patrimonial e Sucessório",
-    description: "Testamentos, heranças, planejamento sucessório e administração de bens.",
+    description: "Holding - Planejamento Sucessório e Tributário.",
     icon: <FileText size={28} strokeWidth={1} />
   },
   {
@@ -42,6 +42,11 @@ const services: ServiceItem[] = [
     title: "Mediação e Arbitragem",
     description: "Solução alternativa de conflitos fora dos tribunais.",
     icon: <HeartHandshake size={28} strokeWidth={1} />
+  },
+  {
+    title: "Cobranças",
+    description: "Atuação estratégica na recuperação de créditos e negociações.",
+    icon: <FileText size={28} strokeWidth={1} />
   }
 ];
 

@@ -57,16 +57,17 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Escritório</h5>
-                  <p className="text-sm">Edifício Helbor Offices<br />Rua Henrique Meyer, 280<br />Centro - Joinville - SC</p>
+                  <p className="text-sm">Rua Dona Francisca, 260<br />7º andar - sala 701<br />Centro - Joinville - SC<br />CEP: 89201-250</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-6 group">
-                <a href="tel:+554796753244" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
+                <a href="tel:+5547988028253" className="p-3 border border-brand-gold/30 rounded-full text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
                   <Phone size={18} />
                 </a>
                 <div>
                   <h5 className="font-serif text-lg text-white mb-1">Telefone</h5>
+                  <a href="tel:+5547988028253" className="text-sm block hover:text-brand-gold transition-colors">(47) 98802-8253</a>
                   <a href="tel:+554796753244" className="text-sm block hover:text-brand-gold transition-colors">(47) 96753-244</a>
                 </div>
               </div>
