@@ -8,24 +8,42 @@ const Contact: React.FC = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const subject = encodeURIComponent(`Contato via Site - ${formData.name}`);
-    const body = encodeURIComponent(
-      `Nome: ${formData.name}\n` +
-      `Telefone: ${formData.phone}\n` +
-      `E-mail: ${formData.email}\n\n` +
-      `Mensagem:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:contato@tambosiadv.adv.br?subject=${subject}&body=${body}`;
+    setStatus('sending');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xvzljkbq', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          nome: formData.name,
+          telefone: formData.phone,
+          email: formData.email,
+          mensagem: formData.message,
+          _subject: `Contato via Site - ${formData.name}`
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -139,12 +157,19 @@ const Contact: React.FC = () => {
                 <label htmlFor="message" className="absolute left-0 -top-3 text-xs text-brand-gold transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-brand-gray/50 peer-placeholder-shown:top-4 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-brand-gold">Como podemos ajudar?</label>
               </div>
 
-              <div className="pt-6 text-right">
-                <button 
-                  type="submit" 
-                  className="px-12 py-4 bg-transparent border border-brand-gold text-brand-gold font-sans uppercase tracking-widest text-xs hover:bg-brand-gold hover:text-white transition-all duration-500"
+              <div className="pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-end gap-4">
+                {status === 'success' && (
+                  <p className="text-sm text-brand-gold font-light">Mensagem enviada com sucesso. Entraremos em contato em breve.</p>
+                )}
+                {status === 'error' && (
+                  <p className="text-sm text-red-400 font-light">Não foi possível enviar. Tente novamente ou use o e-mail acima.</p>
+                )}
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="px-12 py-4 bg-transparent border border-brand-gold text-brand-gold font-sans uppercase tracking-widest text-xs hover:bg-brand-gold hover:text-white transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Enviar
+                  {status === 'sending' ? 'Enviando...' : 'Enviar'}
                 </button>
               </div>
             </form>
